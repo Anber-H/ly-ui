@@ -1,7 +1,11 @@
 {
-  "name": "ly-ui",
+  "name": "lyln-ui",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "dist/ly-ui.umd.min.js",
+  "author": {
+    "name": "Anber"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -41,10 +45,5 @@
       "parser": "babel-eslint"
     },
     "rules": {}
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
-  ]
+  }
 }

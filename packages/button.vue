@@ -47,7 +47,7 @@ export default {
     }
   },
   created () {
-    console.log(this.$slots)
+    console.log(this.type)
   },
   methods: {
     handleClick (e) {
@@ -57,6 +57,11 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+%default-disabled {
+  border-color: #ebeef5;
+  background-color: #fff;
+  color: #c0c4cc;
+}
 %primary-disabled {
   border-color: #a0cfff;
   background-color: #a0cfff;
@@ -227,7 +232,7 @@ export default {
   }
 }
 //disabled
-@each $type in (primary, success, warning, info, danger) {
+@each $type in (default, primary, success, warning, info, danger) {
   .ly-button-#{$type}.is-disabled {
     @extend %#{$type}-disabled;
     &:hover,
@@ -247,7 +252,7 @@ export default {
   padding: 12px;
 }
 // icon配套样式
-.ly-button [class*=yl-icon-]+span{
+.ly-button [class*=icon-]+span{
   margin-left: 5px;
 }
 // disabled属性
