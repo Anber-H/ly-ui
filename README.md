@@ -1,24 +1,11 @@
-# ly-ui
+**初始化vue项目
+vue create demo
 
-## Project setup
-```
-yarn install
-```
+**安装组件库
+yarn add ly-ui
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+**全局导入
+import LyUI from 'ly-ui'
+import 'lyui/lib/lyui.css'
 
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Vue.use(LyUI)
