@@ -19,42 +19,42 @@
 </template>
 <script>
 export default {
-  name: 'LyButton',
-  props: {
-    type: {
-      type: String,
-      default: 'default'
+    name: 'LyButton',
+    props: {
+        type: {
+            type: String,
+            default: 'default'
+        },
+        plain: {
+            type: Boolean,
+            default: false
+        },
+        round: {
+            type: Boolean,
+            defalut: false
+        },
+        circle: {
+            type: Boolean,
+            defalut: false
+        },
+        icon: {
+            type: String,
+            default: ''
+        },
+        disabled: {
+            type: Boolean,
+            defalut: false
+        }
     },
-    plain: {
-      type: Boolean,
-      default: false
+    created () {
+        console.log(this.type);
     },
-    round: {
-      type: Boolean,
-      defalut: false
-    },
-    circle: {
-      type: Boolean,
-      defalut: false
-    },
-    icon: {
-      type: String,
-      default: ''
-    },
-    disabled: {
-      type: Boolean,
-      defalut: false
+    methods: {
+        handleClick (e) {
+            this.$emit('click', e);
+        }
     }
-  },
-  created () {
-    console.log(this.type)
-  },
-  methods: {
-    handleClick (e) {
-      this.$emit('click', e)
-    }
-  }
-}
+};
 </script>
 <style lang="scss" scoped>
 %default-disabled {
